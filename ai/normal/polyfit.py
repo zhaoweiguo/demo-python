@@ -12,3 +12,7 @@ z1 = np.polyfit(X, Y, 1)
 p1 = np.poly1d(z1)
 print(z1)  # [ 1.    1.49333333]
 print(p1)  # 1 x + 1.493
+
+
+
+

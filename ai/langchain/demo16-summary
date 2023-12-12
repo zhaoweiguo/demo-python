@@ -1,0 +1,27 @@
+from langchain.prompts import PromptTemplate
+from langchain.llms import OpenAI
+from langchain.chains import ConversationChain
+from langchain.memory import ConversationSummaryMemory
+
+llm = OpenAI(temperature=0)
+memory = ConversationSummaryMemory(llm=OpenAI())
+
+prompt_template = """你是一个中国IT开发者，对RFC标准特别熟悉，用中文对各RFC文档中的各小节总结，然后再对整体进行总结。需要满足以下要求:
+1. 你的回答必须是中文
+2. 回答限制在300个字以内
+
+{history}
+Human: {input}
+AI:"""
+prompt = PromptTemplate(
+    input_variables=["history", "input"], template=prompt_template
+)
+conversation_with_summary = ConversationChain(
+    llm=llm, 
+    memory=memory,
+    prompt=prompt,
+    verbose=True
+)
+conversation_with_summary.predict(input="你好")
+
+
