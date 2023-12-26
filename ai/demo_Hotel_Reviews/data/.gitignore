@@ -1,2 +1,3 @@
-./Hotel_Reviews.csv
-./*.csv
+Hotel_Reviews.csv
+Hotel_Reviews_Filtered.csv
+Hotel_Reviews_NLP.csv
