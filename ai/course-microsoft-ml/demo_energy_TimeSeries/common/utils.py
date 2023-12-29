@@ -23,7 +23,7 @@ def load_data(data_dir):
 
 def mape(predictions, actuals):
     """Mean absolute percentage error"""
-    return ((predictions - actuals).abs() / actuals).mean()
+    return (np.abs(predictions - actuals) / actuals).mean()
 
 
 def create_evaluation_df(predictions, test_inputs, H, scaler):
