@@ -1,3 +1,4 @@
+# 尾递归
 import time
 
 def factorial(n):
