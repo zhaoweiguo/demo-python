@@ -21,7 +21,6 @@ class  OcrHandle(object):
         @@im:Array
         @@text_recs:text box
         @@ifIm:是否输出box对应的img
-
         """
         results = []
         boxes_list = sorted_boxes(np.array(boxes_list))
