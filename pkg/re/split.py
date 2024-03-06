@@ -1,7 +1,7 @@
 import re
 import unittest
 
-class TestResplit(unittest.TestCase):
+class TestSplit(unittest.TestCase):
     def test_split_by_dot(self):
         text = "a.b.c.d"
         expected = ["a", "b", "c", "d"]
